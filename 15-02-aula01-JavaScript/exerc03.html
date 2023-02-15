@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Batista">
+	<title>Teste Par Impar</title>
+	<style type="text/css">
+		body
+		{
+			font-family: verdana, Geneva, Tahoma, sans-serif;
+			font-size:20px;
+			text-decoration:none;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let numero
+		while (numero || 'sair')
+		{
+			numero = prompt("Digite um número inteiro positivo:");
+			numero = parseInt(numero);
+	
+			if (isNaN(numero) || numero < 1) 
+			{
+				alert("Número inválido! Digite um número inteiro positivo.");
+			} 
+			else 
+			{
+				if (numero % 2 === 0) {
+					alert(numero + " é um número par!");
+				} else {
+					alert(numero + " é um número ímpar!");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Batista">
+	<title>Calcular Fatorial</title>
+	<style type="text/css">
+		body
+		{
+			font-family: verdana, Geneva, Tahoma, sans-serif;
+			font-size:20px;
+			text-decoration:none;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let numero = prompt("Digite um número inteiro positivo:");
+		numero = parseInt(numero); // converte a entrada do usuário para um número inteiro
+
+		if (isNaN(numero) || numero < 1) {
+		  // verifica se o número não é um número ou é menor que 1
+		  alert("Número inválido! Digite um número inteiro positivo.");
+		} 
+		else 
+		{
+		  // calcula o fatorial do número usando um loop
+		  let fatorial = 1;
+		  for (let i = 1; i <= numero; i++) {
+			fatorial *= i;
+		  }
+		  // exibe o resultado do fatorial em uma janela de alerta
+		  alert("O fatorial de " + numero + " é " + fatorial + ".");
+		}
+	</script>
+</body>
+</html>
