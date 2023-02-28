@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Batista">
+	<title>Data atual</title>
+	<link rel="stylesheet" type="text/css" href="../css/geral.css"  />
+</head>
+<body>
+	<p id="data"></p>
+
+	<script>
+		const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+		const diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+
+		const dataAtual = new Date();
+
+		const diaDaSemana = diasDaSemana[dataAtual.getDay()];
+		const dia = dataAtual.getDate();
+		const mes = meses[dataAtual.getMonth()];
+		const ano = dataAtual.getFullYear();
+
+		const dataFormatada = `${diaDaSemana}, ${dia} de ${mes} de ${ano}`;
+
+		document.getElementById("data").innerHTML = dataFormatada;
+	</script>
+	
+	<br><br>	
+	<a href="index.html">VOLTAR</a>
+</body>
+</html>

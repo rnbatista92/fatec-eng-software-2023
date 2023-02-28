@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Batista">
+	<title>Palíndromo</title>
+	<link rel="stylesheet" type="text/css" href="../css/geral.css"  />
+</head>
+<body>
+	<label for="texto">Digite uma palavra ou frase:</label>
+	<input type="text" id="texto">
+	<button onclick="verificaPalindromo()">Verificar</button>
+
+	<script>
+		function verificaPalindromo() {
+			const texto = document.getElementById("texto").value.toLowerCase().replace(/[^a-z0-9]+/g, '');
+			const textoInvertido = texto.split('').reverse().join('');
+
+			if (texto === textoInvertido) {
+				alert(`O texto "${texto}" é um palíndromo!`);
+			} else {
+				alert(`O texto "${texto}" não é um palíndromo.`);
+			}
+		}
+	</script>
+	
+	<br><br>	
+	<a href="index.html">VOLTAR</a>
+</body>
+</html>
